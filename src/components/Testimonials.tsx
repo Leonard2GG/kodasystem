@@ -1,26 +1,26 @@
 import Reveal from './Reveal'
-import { QuoteIcon, StarIcon } from './icons'
+import { StarIcon } from './icons'
 
 const testimonials = [
   {
     quote:
       'Cada vez que fallaba la caja, parábamos las ventas. Con Koda Systems el sistema simplemente funciona, y para un café eso vale oro.',
     name: 'Propietario',
-    role: 'Café · Holguín',
+    role: 'El ComeCome · Holguín',
     initial: 'C',
   },
   {
     quote:
       'Todo transparente desde el primer día: me explicaron qué pasaba, cuánto costaba y me acompañaron hasta que quedó funcionando.',
     name: 'Administradora',
-    role: 'Comercio · Holguín',
+    role: 'Vie · Holguín',
     initial: 'A',
   },
   {
     quote:
       'Nos automatizaron el inventario y dejamos de perder horas contando a mano. Hoy veo los números de mi negocio en minutos.',
     name: 'Responsable',
-    role: 'Despacho · Holguín',
+    role: 'La Loma · Holguín',
     initial: 'R',
   },
 ]
@@ -48,9 +48,6 @@ export default function Testimonials() {
             <Reveal key={t.role} delay={i * 0.08} y={36}>
               <article className="testi">
                 <div className="testi-top">
-                  <span className="testi-quote">
-                    <QuoteIcon size={28} />
-                  </span>
                   <span className="testi-stars">
                     {Array.from({ length: 5 }).map((_, n) => (
                       <StarIcon key={n} size={14} />

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion, useReducedMotion, useScroll, useSpring } from 'framer-motion'
 import { MenuIcon, XIcon } from './icons'
 import { scrollToId } from '../lib/scroll'
+import logo from '../assets/logo.svg'
 
 const links = [
   { href: '#servicios', label: 'Servicios' },
@@ -56,7 +57,7 @@ export default function Navbar() {
         <div className="container">
           <div className="nav-inner">
             <a href="#top" onClick={go('#top')} className="brand" aria-label="Koda Systems, ir al inicio">
-              <img src="/logo.svg" alt="Koda Systems" />
+              <img src={logo} alt="Koda Systems" />
             </a>
 
             <nav aria-label="Principal">
@@ -72,8 +73,9 @@ export default function Navbar() {
             </nav>
 
             <a
-              href="#contacto"
-              onClick={go('#contacto')}
+              href="https://wa.me/5350306119"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary nav-cta desktop-only"
             >
               Hablemos

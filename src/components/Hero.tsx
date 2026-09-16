@@ -15,6 +15,8 @@ const item: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
 }
 
+const WA_LINK = 'https://wa.me/5350306119'
+
 const trust = [
   { icon: ClockIcon, label: 'Respuesta el mismo día' },
   { icon: ShieldCheckIcon, label: 'Asesoría sin costo' },
@@ -56,11 +58,9 @@ export default function Hero() {
           <motion.div variants={item} className="hero-actions">
             <Magnetic>
               <a
-                href="#contacto"
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollToId('contacto')
-                }}
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-primary btn-lg"
               >
                 Hablemos ahora

@@ -5,7 +5,7 @@ import { ChevronDownIcon } from './icons'
 const faqs = [
   {
     q: '¿Atienden solo cafés y comercios?',
-    a: 'No. Empezamos muy cerca de cafés, restaurantes y tiendas, pero hoy ayudamos a cualquier negocio que quiera informatizar sus procesos: consultorios, escuelas, academias, despachos, almacenes y más.',
+    a: 'No. Empezamos muy cerca de cafés, restaurantes y tiendas, pero hoy ayudamos a cualquier negocio privado que quiera informatizar sus procesos: pymes, cafeterías, consultorios dentales privados, despachos, almacenes y más.',
   },
   {
     q: '¿Trabajan a domicilio o remoto?',

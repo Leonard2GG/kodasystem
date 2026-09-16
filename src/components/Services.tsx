@@ -2,6 +2,8 @@ import Reveal from './Reveal'
 import TiltCard from './TiltCard'
 import { WrenchIcon, PlugIcon, RocketIcon, CodeIcon, ArrowRightIcon } from './icons'
 
+const WA_LINK = 'https://wa.me/5350306119'
+
 const services = [
   {
     icon: WrenchIcon,
@@ -70,7 +72,12 @@ export default function Services() {
                       </span>
                     ))}
                   </div>
-                  <a href="#contacto" className="card-link">
+                  <a
+                    href={WA_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="card-link"
+                  >
                     Hablemos de esto <ArrowRightIcon size={16} />
                   </a>
                 </article>

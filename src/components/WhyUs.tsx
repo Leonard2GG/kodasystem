@@ -1,6 +1,8 @@
 import Reveal from './Reveal'
 import { CheckIcon } from './icons'
 
+const WA_LINK = 'https://wa.me/5350306119'
+
 const reasons = [
   {
     num: '01',
@@ -51,7 +53,12 @@ export default function WhyUs() {
                 siempre. Por eso trabajamos cerca de ti, explicamos todo y nos
                 hacemos responsables del resultado.
               </p>
-              <a href="#contacto" className="btn btn-primary">
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
                 Empezar una conversación
               </a>
             </div>

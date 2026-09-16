@@ -1,4 +1,6 @@
 import { PhoneIcon, WhatsappIcon, MapPinIcon, ArrowRightIcon } from './icons'
+import logo from '../assets/logo.svg'
+import { scrollToId } from '../lib/scroll'
 
 const services = [
   'Soporte técnico',
@@ -18,18 +20,28 @@ const nav = [
 export default function Footer() {
   const year = new Date().getFullYear()
 
+  const go = (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    scrollToId(href.replace('#', ''))
+  }
+
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <img src="/logo.svg" alt="Koda Systems" />
+            <img src={logo} alt="Koda Systems" />
             <p>
               Soluciones informáticas para pymes, cafés, comercios y cualquier
               negocio que quiera informatizar sus procesos. Tu operación nunca
               se detiene.
             </p>
-            <a href="#contacto" className="card-link" style={{ marginTop: '1.1rem' }}>
+            <a
+              href="#contacto"
+              onClick={go('#contacto')}
+              className="card-link"
+              style={{ marginTop: '1.1rem' }}
+            >
               Contáctanos <ArrowRightIcon size={15} />
             </a>
           </div>
@@ -39,7 +51,9 @@ export default function Footer() {
             <ul>
               {services.map((s) => (
                 <li key={s}>
-                  <a href="#servicios">{s}</a>
+                  <a href="#servicios" onClick={go('#servicios')}>
+                    {s}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -50,7 +64,9 @@ export default function Footer() {
             <ul>
               {nav.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href}>{l.label}</a>
+                  <a href={l.href} onClick={go(l.href)}>
+                    {l.label}
+                  </a>
                 </li>
               ))}
             </ul>
