@@ -1999,8 +1999,8 @@ textarea {
     scroll-padding-top: 84px;
   }
 
-  .hero-scroll {
-    display: none;
+  .hero {
+    padding-bottom: 120px;
   }
 
   .nav-links {
@@ -2047,10 +2047,6 @@ textarea {
 
   .hero-trust {
     gap: 0.6rem 1.1rem;
-  }
-
-  .hero-scroll {
-    display: none;
   }
 
   .footer-grid {

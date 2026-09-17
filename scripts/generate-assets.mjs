@@ -5,9 +5,13 @@ import sharp from 'sharp'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const pub = join(root, 'public')
+const src = join(root, 'src', 'assets')
 
-const faviconSvg = await readFile(join(pub, 'favicon.svg'))
-const logoSvg = await readFile(join(pub, 'logo.svg'))
+const faviconSvg = await readFile(join(src, 'favicon.svg'))
+const logoSvg = await readFile(join(src, 'logo.svg'))
+
+await writeFile(join(pub, 'favicon.svg'), faviconSvg)
+await writeFile(join(pub, 'logo.svg'), logoSvg)
 
 const png = (size) =>
   sharp(faviconSvg, { density: 384 }).resize(size, size).png().toBuffer()
