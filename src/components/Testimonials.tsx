@@ -66,13 +66,6 @@ export default function Testimonials() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.15}>
-          <p className="testi-note">
-            Puedes pedirnos referencias verificables de negocios reales cuando
-            hablemos. Compartimos contactos con gusto.
-          </p>
-        </Reveal>
       </div>
     </section>
   )

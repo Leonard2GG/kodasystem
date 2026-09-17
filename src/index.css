@@ -1578,13 +1578,6 @@ textarea {
   color: var(--muted);
 }
 
-.testi-note {
-  margin-top: clamp(24px, 3vw, 32px);
-  text-align: center;
-  font-size: 0.86rem;
-  color: var(--muted);
-}
-
 /* ---------- FAQ ---------- */
 
 .faq-list {
